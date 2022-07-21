@@ -1,15 +1,15 @@
 /* font style  */
 
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Lobster&family=Poppins:wght@500;700&family=Roboto:ital@0;1&family=Rubik&display=swap");
-
+/* global variable */
 * {
   scroll-behavior: smooth;
 }
 
+/* header section design */
+
 header {
   margin-bottom: 65px;
-  /* width: auto;
-  height: auto; */
   font-family: "Poppins", sans-serif;
   background-color: #161616;
   border-radius: 30px;
@@ -21,21 +21,24 @@ header {
   padding-top: 20px;
   padding-bottom: 65px;
 }
-
+/* header img design */
 .banner-image img {
   height: 400px;
 }
+/* header h1 title design*/
 .banner-title {
   font-size: 50px;
   padding-bottom: 0px;
 }
+/* header paragraph design */
 .banner-info {
   padding-top: 0;
   padding-bottom: 15px;
   font-size: 12px;
 }
+/* watch live button design */
 .banner-button {
-  background-color: #dd0000;
+  background-color: #eb7878;
   height: 55px;
   width: 180px;
   color: white;
@@ -44,18 +47,28 @@ header {
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
   margin-bottom: 70px;
+  box-shadow: 0 9px #999;
+}
+.banner-button:active {
+  background-color: #dd0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .banner-button:hover {
+  background-color: #dd0000;
   cursor: pointer;
 }
+/* watch live button icon design */
 .fa-arrow-up-right-from-square {
   padding-left: 20px;
 }
+
+/* main class flex style */
 .container {
   display: flex;
   flex-direction: row;
-  /* width: 50%; */
 }
+/* aside content section design */
 .aside-contents {
   background-color: #161616;
   max-height: 250px;
@@ -68,7 +81,7 @@ header {
   border-radius: 10px;
   margin-right: 25px;
 }
-
+/* aside content button design */
 .aside-button {
   width: 225px;
   height: 50px;
@@ -86,14 +99,7 @@ header {
   background-color: #dd0000;
 }
 
-.match-live-icons {
-  display: flex;
-  padding-bottom: 20px;
-}
-.match-live-icons-one {
-  padding-right: 30px;
-  padding-left: 20px;
-}
+/* match live section design */
 .match-live {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -104,6 +110,7 @@ header {
   border: 1px solid #e8e8e8;
   border-radius: 10px;
 }
+/* transfer button design */
 .match-live-button {
   padding-left: 20px;
   padding-top: 15px;
@@ -115,10 +122,22 @@ header {
   background-color: white;
   border-radius: 10px;
 }
+
+/* match live section para design  */
 .match-live-info {
   padding-left: 20px;
   font-family: "Poppins", sans-serif;
 }
+/* match live icons design */
+.match-live-icons {
+  display: flex;
+  padding-bottom: 20px;
+}
+.match-live-icons-one {
+  padding-right: 30px;
+  padding-left: 20px;
+}
+/* hidden button design */
 .hidden-button {
   display: flex;
   align-items: center;
@@ -139,31 +158,38 @@ header {
   display: none;
 }
 
+/* footer design */
+
+footer {
+  margin-top: 120px;
+}
+
 .footer-container {
   width: 100%;
   background-color: #161616;
   color: white;
   font-family: "Poppins", sans-serif;
 }
-hr {
-  width: 80%;
-  color: #ffffff1a;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-footer {
-  margin-top: 120px;
-}
+
 .footer-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+hr {
+  width: 80%;
+  color: #ffffff1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .footer-items {
   display: flex;
   flex-direction: row;
   column-gap: 50px;
   margin-top: 30px;
 }
+
 .footer-icons {
   font-size: 30px;
   display: flex;
@@ -173,7 +199,7 @@ footer {
   margin-bottom: 30px;
 }
 
-/* upcoming section */
+/*----------------------------------- upcoming section------------------------- */
 .upcoming-images {
   display: flex;
   flex-direction: row;
@@ -192,7 +218,10 @@ footer {
   font-family: "Poppins", sans-serif;
   padding-bottom: 40px;
 }
-/* media query tablet (ipad-mini) */
+/* ------------------------------------upcoming section ends---------------------------- */
+
+/*---------------------------- media query tablet (ipad-mini)---------------------------- */
+
 @media only screen and (max-width: 768px) {
   .banner-title {
     font-size: 35px;
@@ -224,9 +253,9 @@ footer {
   .match-live {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .match-live-contents {
-    
-  } */
+  .match-live-contents img {
+    width: 100%;
+  }
   .view-button {
     display: block;
   }
@@ -235,11 +264,62 @@ footer {
     column-gap: 25px;
   }
 }
-/* media query for mobile */
-/* @media only screen and (max-width:320px){
-  
 
+/* ---------------------------media query for mobile (iphone 6/7/8)------------------------ */
 
-
-
-} */
+@media only screen and (max-width: 667px) {
+  header {
+    width: 100vw;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1, 1fr;
+    align-items: center;
+  }
+  .banner-title {
+    font-size: 25px;
+    text-align: center;
+  }
+  .banner-info {
+    text-align: center;
+  }
+  .banner-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .aside-contents {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: white;
+    row-gap: 25px;
+  }
+  .aside-button {
+    padding: 0 30px;
+    text-align: center;
+    width: auto;
+    background-color: white;
+    border: 1px solid rgba(61, 58, 58, 0.1);
+    white-space: nowrap;
+  }
+  .match-live {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0%;
+  }
+  .match-live-contents img {
+    width: 100%;
+  }
+  .view-button {
+    display: none;
+  }
+  .footer-items {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    white-space: nowrap;
+    column-gap: 25px;
+  }
+}
